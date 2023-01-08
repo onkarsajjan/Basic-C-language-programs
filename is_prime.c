@@ -9,15 +9,16 @@ int main()
      scanf("%d",&num);
 
      //number is prime if it is divisible by only 1 and itself
-     //no number greater than half the number plus one divide the number
-     //e.g. if number is 10 then (10/2)+1=6 can not divide 10
 
-     if(num == 1)
-          printf("1 is neither prime nor composite");
+     if(num == 0 || num == 1)
+          flag = false;
      if(num == 2)
+     {
           printf("2 is a prime number");
+          return 0;
+     }
 
-     for(int i=2;i<((num/2)+1);i++)
+     for(int i=2;i<(num/2);i++)
      {
           if(num%i == 0)
           {
